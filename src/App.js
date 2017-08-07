@@ -17,7 +17,7 @@ class App extends Component {
             <h2>Welcome to React</h2>
           </div>
           <div className="App-intro">
-            <Route exact path="/home" component={ () => <div>Salam</div> }/>
+            <Route exact path="/home" component={ () => <Home name={"Pouria"} /> }/>
           </div>
         </div>
       </Router>
