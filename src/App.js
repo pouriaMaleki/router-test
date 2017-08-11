@@ -18,7 +18,7 @@ class App extends Component {
           </div>
           <div className="App-intro">
             <Route exact path="/" component={ () => <Link to="/home" >Go To Home</Link>} />
-            <Route path="/home" component={ () => <Link to="/" >Go Home</Link>} />
+            <Route path="/home" component={ () => <Link to="/" >Go Back</Link>} />
             <Route path="/home" component={Home} />
           </div>
         </div>
