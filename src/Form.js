@@ -1,18 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default class Form extends Component {
-  render() {
-    return (
+export default function Form(props) {
+  return (
+    <div>
+      Name or Title <input onChange={ (event) => props.onChange(event.target.value) } value={props.value} />
       <div>
-        Name or Title <input onChange={ (event) => this.props.onChange(event.target.value) } value={this.props.value} />
-        <div>
-          <Link to={`/home/user/${this.props.value}`} > As User </Link>
-        </div>
-        <div>
-          <Link to={`/home/company/${this.props.value}`} > As Company </Link>
-        </div>
+        <Link to={`/home/user/${props.value}`} > As User </Link>
       </div>
-    );
-  }
+      <div>
+        <Link to={`/home/company/${props.value}`} > As Company </Link>
+      </div>
+    </div>
+  );
 }
