@@ -19,7 +19,7 @@ export default class Home extends Component {
     return (
       <div>
         <h3> This is home header {this.state.nameFormValue}. </h3>
-          <Route exact path={this.props.match.path} render={ () => <Form onChange={this.onChangeNameForm} value={this.state.nameFormValue} />} />
+          <Route exact path={this.props.match.path} render={ () => <Form onChange={this.onChangeNameForm} value={this.state.nameFormValue} path={this.props.match.path} />} />
           <Route path={`${this.props.match.path}/user/:name?`} component={User} />
           <Route path={`${this.props.match.path}/company/:name`} component={Company} />
       </div>
