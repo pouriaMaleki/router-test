@@ -2,20 +2,15 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 export default class Form extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { inputValue: '' };
-  }
-
   render() {
     return (
       <div>
-        Name or Title <input onChange={ (event) => this.setState({ inputValue: event.target.value }) } value={this.state.inputValue} />
+        Name or Title <input onChange={ (event) => this.props.onChange(event.target.value) } value={this.props.value} />
         <div>
-          <Link to={`/home/user/${this.state.inputValue}`} > As User </Link>
+          <Link to={`/home/user/${this.props.value}`} > As User </Link>
         </div>
         <div>
-          <Link to={`/home/company/${this.state.inputValue}`} > As Company </Link>
+          <Link to={`/home/company/${this.props.value}`} > As Company </Link>
         </div>
       </div>
     );
