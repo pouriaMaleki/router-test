@@ -17,8 +17,7 @@ class App extends Component {
             <h2>Welcome to React</h2>
           </div>
           <div className="App-intro">
-            <Route path="/home" component={ (props) => <Home name={"Pouria"} {...props} /> }/>
-            <Route path="/entry" component={ (props) => <Home name={"Pouria"} {...props} /> }/>
+            <Route path="/home" component={Home} />
           </div>
         </div>
       </Router>

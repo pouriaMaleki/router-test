@@ -4,7 +4,7 @@ export default class User extends Component {
   render() {
     return (
       <div>
-        Hello {this.props.name}
+        Hello {this.props.match.params.name}
       </div>
     );
   }
