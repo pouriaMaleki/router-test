@@ -8,8 +8,8 @@ export default class Home extends Component {
     return (
       <div>
         <h3> This is home header. </h3>
-         <Route path='/home/user' component={ () => <User name={this.props.name} /> }/> 
-         <Route path='/home/company' component={ () => <Company name={this.props.name} /> }/> 
+         <Route path={`${this.props.match.path}/user`} component={ () => <User name={this.props.name} /> }/> 
+         <Route path={`${this.props.match.path}/company`} component={ () => <Company name={this.props.name} /> }/> 
       </div>
     );
   }
